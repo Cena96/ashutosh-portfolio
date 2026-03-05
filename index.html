@@ -3,89 +3,132 @@
 <head>
 <title>Ashutosh Chatterjee | Cloud & DevOps Engineer</title>
 <style>
-body {
-font-family: Arial, sans-serif;
-margin: 40px;
-background:#f5f5f5;
-}
+body{font-family:Arial;margin:0;background:#f4f6f8;color:#333}
+.header{background:#1f2937;color:white;padding:40px;text-align:center}
+.container{max-width:900px;margin:auto;padding:30px}
+h2{border-bottom:2px solid #eee;padding-bottom:8px}
 
-.container{
-max-width:900px;
-background:white;
-padding:30px;
-margin:auto;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
+.skill{margin:15px 0}
+.skill-bar{background:#ddd;border-radius:20px;overflow:hidden}
+.skill-fill{height:14px;background:#4f46e5;width:0;animation:fill 2s forwards}
 
-h1{color:#2c3e50}
-h2{color:#34495e}
+.aws{width:90%}
+.k8s{width:85%}
+.network{width:88%}
+.cicd{width:80%}
 
-.section{margin-top:25px}
+@keyframes fill{to{width:var(--width)}}
 
-ul{line-height:1.8}
+.card{background:white;padding:20px;margin-top:20px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+
+.project{margin-bottom:20px}
+
+.footer{text-align:center;padding:30px;background:#111;color:white;margin-top:40px}
 
 </style>
+
+<script>
+window.onload=function(){
+ document.querySelectorAll('.skill-fill').forEach(function(el){
+   el.style.width=el.dataset.width
+ })
+}
+</script>
 </head>
 
 <body>
 
+<div class="header">
+<h1>Ashutosh Chatterjee</h1>
+<p>AWS Cloud Engineer • Networking SME • DevOps & Kubernetes</p>
+</div>
+
 <div class="container">
 
-<h1>Ashutosh Chatterjee</h1>
-<p><b>Cloud | Networking | DevOps Engineer</b></p>
-
+<h2>Professional Summary</h2>
 <p>
-Cloud professional with 6+ years of experience delivering scalable solutions for enterprise customers. 
-AWS-certified with strong expertise in networking, Kubernetes, CI/CD pipelines, and cloud-native architectures.
-Skilled in troubleshooting distributed systems and building automation-driven infrastructure.
+Cloud and DevOps engineer with 6+ years of experience delivering scalable AWS solutions for enterprise workloads. Experienced in Kubernetes operations, cloud networking, CI/CD automation and troubleshooting distributed systems running in production environments.
 </p>
 
-<div class="section">
+<div class="card">
 <h2>Core Skills</h2>
+
+<div class="skill">
+<p>AWS Architecture</p>
+<div class="skill-bar">
+<div class="skill-fill" data-width="90%"></div>
+</div>
+</div>
+
+<div class="skill">
+<p>Kubernetes</p>
+<div class="skill-bar">
+<div class="skill-fill" data-width="85%"></div>
+</div>
+</div>
+
+<div class="skill">
+<p>Cloud Networking</p>
+<div class="skill-bar">
+<div class="skill-fill" data-width="88%"></div>
+</div>
+</div>
+
+<div class="skill">
+<p>CI/CD & Automation</p>
+<div class="skill-bar">
+<div class="skill-fill" data-width="80%"></div>
+</div>
+</div>
+
+</div>
+
+<div class="card">
+<h2>AWS Architecture Experience</h2>
 <ul>
-<li>AWS (VPC, EC2, ALB, EKS, Lambda)</li>
-<li>Kubernetes</li>
-<li>CI/CD Pipelines</li>
-<li>Cloud Networking</li>
-<li>DevOps Automation</li>
-<li>Monitoring & Observability</li>
+<li>Designed highly available VPC architectures using public and private subnets</li>
+<li>Implemented Auto Scaling and Load Balancers for enterprise applications</li>
+<li>Built serverless integrations using Lambda, API Gateway and SQS</li>
+<li>Implemented monitoring and alerting using CloudWatch</li>
 </ul>
 </div>
 
-<div class="section">
-<h2>Professional Experience</h2>
+<div class="card">
+<h2>Kubernetes Case Study</h2>
+<div class="project">
+<strong>Enterprise EKS Production Incident</strong>
 <p>
-6+ years supporting enterprise cloud workloads, troubleshooting Kubernetes environments, 
-optimizing networking architectures, and implementing CI/CD pipelines.
+Resolved a production outage where application pods were not receiving traffic. Investigated service endpoints, kube-proxy routing and pod scheduling events. Identified node resource exhaustion causing failed scheduling and implemented cluster autoscaling policies.
+</p>
+
+<p>
+Result: Restored service availability and implemented monitoring to prevent recurrence.
 </p>
 </div>
+</div>
 
-<div class="section">
-<h2>Projects</h2>
+<div class="card">
+<h2>Key Projects</h2>
 <ul>
-<li>AI-driven operational monitoring assistant</li>
-<li>Automated cloud deployment pipelines</li>
-<li>Kubernetes workload troubleshooting for enterprise applications</li>
+<li>AI automation assistant for cloud support operations</li>
+<li>Automated CI/CD deployment pipelines for microservices</li>
+<li>Kubernetes troubleshooting for enterprise workloads</li>
 </ul>
 </div>
 
-<div class="section">
-<h2>Certifications</h2>
-<ul>
-<li>AWS Certified</li>
-<li>Cloud & DevOps Specialist</li>
-</ul>
-</div>
-
-<div class="section">
+<div class="card">
 <h2>Contact</h2>
 <p>Email: your-email@email.com</p>
-<p>LinkedIn: linkedin.com/in/yourprofile</p>
 <p>GitHub: github.com/cena96</p>
+<p>LinkedIn: linkedin.com</p>
 </div>
 
+</div>
+
+<div class="footer">
+<p>© 2026 Ashutosh Chatterjee</p>
 </div>
 
 </body>
 </html>
+

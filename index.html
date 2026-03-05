@@ -1,138 +1,91 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Github, Download, Cloud, Network, Cpu } from "lucide-react";
-import { motion } from "framer-motion";
-
-export default function Portfolio() {
-  const summary = `Cloud and DevOps professional with 6+ years of experience delivering scalable AWS solutions for enterprise customers. AWS-certified Networking SME with expertise in Kubernetes, CI/CD automation, cloud networking, and observability platforms. Proven ability to troubleshoot distributed systems, optimize architectures, and build AI-driven automation solutions for large-scale production environments.`;
-
-  return (
-    <div className="min-h-screen bg-gray-50 p-8">
-      <div className="max-w-6xl mx-auto space-y-10">
-
-        {/* Hero */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
-        >
-          <h1 className="text-5xl font-bold">Ashutosh Chatterjee</h1>
-          <p className="text-xl text-gray-600 mt-3">
-            AWS Cloud Engineer • Networking SME • DevOps & Kubernetes
-          </p>
-
-          <div className="flex justify-center gap-4 mt-6 flex-wrap">
-            <Button className="flex gap-2"><Download size={16}/> Resume</Button>
-            <Button variant="outline" className="flex gap-2"><Linkedin size={16}/> LinkedIn</Button>
-            <Button variant="outline" className="flex gap-2"><Github size={16}/> GitHub</Button>
-            <Button variant="outline" className="flex gap-2"><Mail size={16}/> Contact</Button>
-          </div>
-        </motion.div>
-
-        {/* Summary */}
-        <Card className="rounded-2xl shadow-md">
-          <CardContent className="p-6">
-            <h2 className="text-2xl font-semibold mb-4">Professional Summary</h2>
-            <p className="text-gray-700 leading-relaxed">{summary}</p>
-          </CardContent>
-        </Card>
-
-        {/* Core Expertise */}
-        <div className="grid md:grid-cols-3 gap-6">
-
-          <Card className="rounded-2xl shadow-md">
-            <CardContent className="p-6">
-              <Cloud className="mb-3" />
-              <h3 className="text-xl font-semibold mb-2">Cloud Architecture</h3>
-              <p className="text-gray-600">
-                Design and optimization of AWS architectures using EC2, VPC, Lambda, S3, Auto Scaling, and Load Balancers to build highly available enterprise systems.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="rounded-2xl shadow-md">
-            <CardContent className="p-6">
-              <Network className="mb-3" />
-              <h3 className="text-xl font-semibold mb-2">Cloud Networking</h3>
-              <p className="text-gray-600">
-                Deep expertise in VPC networking, Transit Gateway, VPN, Direct Connect, Route53, and traffic routing strategies for enterprise workloads.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="rounded-2xl shadow-md">
-            <CardContent className="p-6">
-              <Cpu className="mb-3" />
-              <h3 className="text-xl font-semibold mb-2">DevOps & Kubernetes</h3>
-              <p className="text-gray-600">
-                Hands-on with EKS Kubernetes clusters, container scaling, CI/CD pipelines using CodePipeline, CodeBuild, CodeDeploy, and automated deployments.
-              </p>
-            </CardContent>
-          </Card>
-
-        </div>
-
-        {/* Key Projects */}
-        <Card className="rounded-2xl shadow-md">
-          <CardContent className="p-6 space-y-4">
-            <h2 className="text-2xl font-semibold">Key Projects</h2>
-
-            <div>
-              <h3 className="font-semibold">AI Automation for Support Engineering</h3>
-              <p className="text-gray-600">
-                Core contributor to a global GenAI automation initiative at AWS that reduced operational workload by 35–50% by generating automated responses for low severity cloud support cases.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold">AI Technical Assessment Chatbot</h3>
-              <p className="text-gray-600">
-                Built an internal AI-driven evaluation system used to assess CloudWatch and Auto Scaling SME candidates, reducing manual assessment effort by nearly 90%.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold">Enterprise Kubernetes Troubleshooting</h3>
-              <p className="text-gray-600">
-                Supported containerized workloads running on Amazon EKS, resolving pod scheduling failures, scaling issues, and service networking problems for enterprise environments.
-              </p>
-            </div>
-
-          </CardContent>
-        </Card>
-
-        {/* Certifications */}
-        <Card className="rounded-2xl shadow-md">
-          <CardContent className="p-6">
-            <h2 className="text-2xl font-semibold mb-4">Certifications</h2>
-            <ul className="space-y-2 text-gray-700">
-              <li>AWS Certified Solutions Architect – Associate</li>
-              <li>AWS Certified AI Practitioner</li>
-              <li>AWS SME – Auto Scaling</li>
-              <li>AWS SME – CloudWatch</li>
-            </ul>
-          </CardContent>
-        </Card>
-
-        {/* Contact */}
-        <Card className="rounded-2xl shadow-md">
-          <CardContent className="p-6">
-            <h2 className="text-2xl font-semibold mb-4">Contact</h2>
-            <p className="text-gray-600 mb-4">
-              Open to Cloud Engineering, DevOps, and AWS Architecture opportunities.
-            </p>
-
-            <div className="flex gap-4 flex-wrap">
-              <Button variant="outline" className="flex gap-2"><Mail size={16}/> Email</Button>
-              <Button variant="outline" className="flex gap-2"><Linkedin size={16}/> LinkedIn</Button>
-              <Button variant="outline" className="flex gap-2"><Github size={16}/> GitHub</Button>
-            </div>
-          </CardContent>
-        </Card>
-
-      </div>
-    </div>
-  );
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ashutosh Chatterjee | Cloud & DevOps Engineer</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 40px;
+background:#f5f5f5;
 }
 
+.container{
+max-width:900px;
+background:white;
+padding:30px;
+margin:auto;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h1{color:#2c3e50}
+h2{color:#34495e}
+
+.section{margin-top:25px}
+
+ul{line-height:1.8}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Ashutosh Chatterjee</h1>
+<p><b>Cloud | Networking | DevOps Engineer</b></p>
+
+<p>
+Cloud professional with 6+ years of experience delivering scalable solutions for enterprise customers. 
+AWS-certified with strong expertise in networking, Kubernetes, CI/CD pipelines, and cloud-native architectures.
+Skilled in troubleshooting distributed systems and building automation-driven infrastructure.
+</p>
+
+<div class="section">
+<h2>Core Skills</h2>
+<ul>
+<li>AWS (VPC, EC2, ALB, EKS, Lambda)</li>
+<li>Kubernetes</li>
+<li>CI/CD Pipelines</li>
+<li>Cloud Networking</li>
+<li>DevOps Automation</li>
+<li>Monitoring & Observability</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Professional Experience</h2>
+<p>
+6+ years supporting enterprise cloud workloads, troubleshooting Kubernetes environments, 
+optimizing networking architectures, and implementing CI/CD pipelines.
+</p>
+</div>
+
+<div class="section">
+<h2>Projects</h2>
+<ul>
+<li>AI-driven operational monitoring assistant</li>
+<li>Automated cloud deployment pipelines</li>
+<li>Kubernetes workload troubleshooting for enterprise applications</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Certifications</h2>
+<ul>
+<li>AWS Certified</li>
+<li>Cloud & DevOps Specialist</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Contact</h2>
+<p>Email: your-email@email.com</p>
+<p>LinkedIn: linkedin.com/in/yourprofile</p>
+<p>GitHub: github.com/cena96</p>
+</div>
+
+</div>
+
+</body>
+</html>
